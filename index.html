@@ -36,14 +36,6 @@
     transition: 0.3s;
   }
   nav a:hover { color: #2563eb; }
-  .social-links a {
-    margin-left: 1rem;
-    text-decoration: none;
-    color: #2563eb;
-    font-weight: 500;
-    transition: 0.3s;
-  }
-  .social-links a:hover { transform: scale(1.15); }
 
   /* Hero */
   .hero {
@@ -63,17 +55,6 @@
     display: inline-block;
   }
   .hero p { max-width: 700px; margin: 0 auto; font-size: 1.2rem; color: #555; }
-  .hero .hero-links a {
-    display: inline-block;
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    background: #2563eb;
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-  .hero .hero-links a:hover { background: #1e40af; transform: scale(1.05); }
 
   /* Sections */
   section { padding: 5rem 2rem; text-align: center; }
@@ -119,18 +100,6 @@
   .testimonial h4 { margin-top: 1rem; color: #2563eb; }
   .testimonial span { font-size: 0.9rem; color: #777; }
 
-  /* Contact */
-  .contact .social-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
-  .contact .social-links a {
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    border: 1px solid #2563eb;
-    color: #2563eb;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-  .contact .social-links a:hover { background: #2563eb; color: #fff; }
-
   /* Footer */
   footer { text-align: center; padding: 2rem; background: #f3f4f6; font-size: 0.9rem; color: #555; }
   footer a { color: #2563eb; margin: 0 10px; text-decoration: none; }
@@ -138,7 +107,10 @@
   /* Typing animation */
   .typing-text { border-right: 2px solid #2563eb; white-space: nowrap; overflow: hidden; display: inline-block; }
 
-  @media (max-width: 768px) { .hero h2 { font-size: 2rem; } .hero h3 { font-size: 1.2rem; } }
+  @media (max-width: 768px) {
+    .hero h2 { font-size: 2rem; }
+    .hero h3 { font-size: 1.2rem; }
+  }
 </style>
 </head>
 <body>
@@ -152,22 +124,12 @@
     <a href="#testimonials">Testimonials</a>
     <a href="#contact">Contact</a>
   </nav>
-  <div class="social-links">
-    <a href="https://github.com/amanpatelitofficial" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/amanpatelofficial/" target="_blank">LinkedIn</a>
-    <a href="https://www.youtube.com/@AmanOps" target="_blank">YouTube</a>
-  </div>
 </header>
 
 <section class="hero">
   <h2>Hi, I’m Aman Patel</h2>
   <h3 class="typing-text"></h3>
   <p>Building scalable and secure cloud infrastructures with DevSecOps best practices.</p>
-  <div class="hero-links">
-    <a href="https://github.com/amanpatelitofficial" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/amanpatelofficial/" target="_blank">LinkedIn</a>
-    <a href="https://www.youtube.com/@AmanOps" target="_blank">YouTube</a>
-  </div>
 </section>
 
 <section id="about">
@@ -206,12 +168,7 @@
 
 <section id="contact">
   <h3>Get in Touch</h3>
-  <p>Connect with me on:</p>
-  <div class="social-links">
-    <a href="https://github.com/amanpatelitofficial" target="_blank">🐙 GitHub</a>
-    <a href="https://www.linkedin.com/in/amanpatelofficial/" target="_blank">💼 LinkedIn</a>
-    <a href="https://www.youtube.com/@AmanOps" target="_blank">▶️ YouTube</a>
-  </div>
+  <p>Contact details or form coming soon.</p>
 </section>
 
 <footer>
