@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aman Patel | DevOps & Cloud Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif; }
+  body { background:#0f172a; color:#f8fafc; line-height:1.6; scroll-behavior:smooth; }
+
+  /* Navbar */
+  .navbar { display:flex; justify-content:space-between; padding:1rem 3rem; background:#1e293b; position:sticky; top:0; z-index:100; align-items:center; }
+  .logo { font-size:1.6rem; font-weight:700; }
+  .logo span { color:#38bdf8; }
+  .nav-links { list-style:none; display:flex; gap:1.5rem; }
+  .nav-links a { color:#f8fafc; text-decoration:none; font-weight:600; transition:0.3s; }
+  .nav-links a:hover { color:#38bdf8; }
+
+  /* Hero Section */
+  .hero { height:100vh; display:flex; justify-content:center; align-items:center; text-align:center; 
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1611922183165-3bfcf33c28f8?auto=format&fit=crop&w=1650&q=80') no-repeat center center/cover; }
+  .hero-text { background:rgba(0,0,0,0.5); padding:2rem 3rem; border-radius:12px; }
+  .hero h1 span { color:#38bdf8; }
+  .btn { display:inline-block; margin-top:1rem; padding:0.75rem 1.5rem; background:#38bdf8; color:#0f172a; border-radius:8px; text-decoration:none; font-weight:bold; transition:0.3s; }
+  .btn:hover { background:#0ea5e9; color:#fff; }
+
+  /* Sections */
+  section { padding:4rem 2rem; max-width:1100px; margin:auto; }
+  h2 { margin-bottom:2rem; color:#38bdf8; text-align:center; }
+
+  /* Skills */
+  .skill-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:1.5rem; }
+  .skill-card { background:#1e293b; padding:1.5rem; border-radius:12px; text-align:center; transition:0.3s; box-shadow:0 4px 12px rgba(0,0,0,0.3);}
+  .skill-card:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.5); }
+
+  /* Projects */
+  .project-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:1.5rem; }
+  .project-card { background:#1e293b; padding:1.5rem; border-radius:12px; transition:0.3s; box-shadow:0 4px 12px rgba(0,0,0,0.3);}
+  .project-card:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.5); }
+
+  /* Contact */
+  .contact { text-align:center; margin-top:1rem; }
+  .contact a { color:#38bdf8; text-decoration:none; margin:0 0.8rem; font-size:1.5rem; transition:0.3s; }
+  .contact a:hover { color:#0ea5e9; }
+
+  /* Footer */
+  footer { text-align:center; padding:1rem; background:#1e293b; margin-top:2rem; font-size:0.9rem; }
+
+  /* Responsive */
+  @media(max-width:768px){ .nav-links { flex-direction:column; gap:1rem; } }
+</style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Let's Code & Deploy<span></span></div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hi, I’m <span>Aman Patel</span></h1>
+      <p>DevOps & Cloud Engineer | CI/CD | Kubernetes | AWS | GCP</p>
+      <a href="#contact" class="btn">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+      I’m a DevOps Engineer with 5+ years of experience in cloud infrastructure, CI/CD pipelines, Kubernetes orchestration, and automation. 
+      I help businesses scale securely and efficiently on AWS, GCP, and hybrid environments.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill-grid">
+      <div class="skill-card">AWS & GCP</div>
+      <div class="skill-card">Docker & Kubernetes</div>
+      <div class="skill-card">CI/CD (Jenkins, GitHub Actions)</div>
+      <div class="skill-card">Terraform & Ansible</div>
+      <div class="skill-card">Linux & Networking</div>
+      <div class="skill-card">Monitoring (Prometheus, Grafana, CloudWatch)</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>EKS Cluster Deployment</h3>
+        <p>Automated deployment of microservices using Helm and Jenkins pipelines.</p>
+      </div>
+      <div class="project-card">
+        <h3>Hybrid Cloud Infrastructure</h3>
+        <p>Built a scalable hybrid environment using Kubeadm, AWS VPC, and VPNs.</p>
+      </div>
+      <div class="project-card">
+        <h3>Monitoring Stack</h3>
+        <p>Implemented full observability with Prometheus, Grafana, and ELK.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact">
+      <a href="mailto:aman@example.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/amanpatelofficial/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/amanpatelitofficial" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Aman Patel - DevOps & Cloud Engineer | Let's Code & Deploy</p>
+  </footer>
+
+</body>
+</html>
