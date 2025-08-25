@@ -3,136 +3,242 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aman Patel | DevOps & Cloud Engineer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>AmanSDLC - Software Engineer – Cloud & DevSecOps</title>
+<link rel="icon" href="https://raw.githubusercontent.com/amanpatelitofficial/amanops-assets/main/logo.png" type="image/png">
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif; }
-  body { background:#0f172a; color:#f8fafc; line-height:1.6; scroll-behavior:smooth; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #333;
+    background: #f9fafb;
+    scroll-behavior: smooth;
+  }
 
-  /* Navbar */
-  .navbar { display:flex; justify-content:space-between; padding:1rem 3rem; background:#1e293b; position:sticky; top:0; z-index:100; align-items:center; }
-  .logo { font-size:1.6rem; font-weight:700; }
-  .logo span { color:#38bdf8; }
-  .nav-links { list-style:none; display:flex; gap:1.5rem; }
-  .nav-links a { color:#f8fafc; text-decoration:none; font-weight:600; transition:0.3s; }
-  .nav-links a:hover { color:#38bdf8; }
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.8s ease;
+  }
+  header h1 { color: #2563eb; font-size: 1.8rem; font-weight: bold; }
+  nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  nav a:hover { color: #2563eb; }
+  .social-links a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+  .social-links a:hover { transform: scale(1.15); }
 
-  /* Hero Section */
-  .hero { height:100vh; display:flex; justify-content:center; align-items:center; text-align:center; 
-    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url('https://images.unsplash.com/photo-1611922183165-3bfcf33c28f8?auto=format&fit=crop&w=1650&q=80') no-repeat center center/cover; }
-  .hero-text { background:rgba(0,0,0,0.5); padding:2rem 3rem; border-radius:12px; }
-  .hero h1 span { color:#38bdf8; }
-  .btn { display:inline-block; margin-top:1rem; padding:0.75rem 1.5rem; background:#38bdf8; color:#0f172a; border-radius:8px; text-decoration:none; font-weight:bold; transition:0.3s; }
-  .btn:hover { background:#0ea5e9; color:#fff; }
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding: 7rem 2rem;
+    background: linear-gradient(to right, #eff6ff, #fff, #e0e7ff);
+  }
+  .hero h2 { font-size: 3rem; color: #1e3a8a; margin-bottom: 1rem; }
+  .hero h3 {
+    font-size: 1.8rem;
+    color: #4338ca;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    border-right: 2px solid #2563eb;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .hero p { max-width: 700px; margin: 0 auto; font-size: 1.2rem; color: #555; }
+  .hero .hero-links a {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .hero .hero-links a:hover { background: #1e40af; transform: scale(1.05); }
 
   /* Sections */
-  section { padding:4rem 2rem; max-width:1100px; margin:auto; }
-  h2 { margin-bottom:2rem; color:#38bdf8; text-align:center; }
+  section { padding: 5rem 2rem; text-align: center; }
+  section h3 { font-size: 2.2rem; color: #2563eb; margin-bottom: 1rem; }
+  section p { font-size: 1.1rem; color: #555; max-width: 800px; margin: 0 auto; line-height: 1.7; }
 
   /* Skills */
-  .skill-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:1.5rem; }
-  .skill-card { background:#1e293b; padding:1.5rem; border-radius:12px; text-align:center; transition:0.3s; box-shadow:0 4px 12px rgba(0,0,0,0.3);}
-  .skill-card:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.5); }
+  .skill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto; }
+  .skill-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .skill-card:hover { transform: translateY(-10px) scale(1.05); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
 
   /* Projects */
-  .project-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:1.5rem; }
-  .project-card { background:#1e293b; padding:1.5rem; border-radius:12px; transition:0.3s; box-shadow:0 4px 12px rgba(0,0,0,0.3);}
-  .project-card:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.5); }
+  .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1000px; margin: 0 auto; }
+  .project-card {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .project-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+  .project-card h4 { color: #2563eb; margin-bottom: 0.5rem; }
+
+  /* Testimonials */
+  .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+  .testimonial {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+  }
+  .testimonial:hover { transform: translateY(-5px); }
+  .testimonial p { font-style: italic; color: #444; line-height: 1.6; }
+  .testimonial h4 { margin-top: 1rem; color: #2563eb; }
+  .testimonial span { font-size: 0.9rem; color: #777; }
 
   /* Contact */
-  .contact { text-align:center; margin-top:1rem; }
-  .contact a { color:#38bdf8; text-decoration:none; margin:0 0.8rem; font-size:1.5rem; transition:0.3s; }
-  .contact a:hover { color:#0ea5e9; }
+  .contact .social-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+  .contact .social-links a {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #2563eb;
+    color: #2563eb;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .contact .social-links a:hover { background: #2563eb; color: #fff; }
 
   /* Footer */
-  footer { text-align:center; padding:1rem; background:#1e293b; margin-top:2rem; font-size:0.9rem; }
+  footer { text-align: center; padding: 2rem; background: #f3f4f6; font-size: 0.9rem; color: #555; }
+  footer a { color: #2563eb; margin: 0 10px; text-decoration: none; }
 
-  /* Responsive */
-  @media(max-width:768px){ .nav-links { flex-direction:column; gap:1rem; } }
+  /* Typing animation */
+  .typing-text { border-right: 2px solid #2563eb; white-space: nowrap; overflow: hidden; display: inline-block; }
+
+  @media (max-width: 768px) { .hero h2 { font-size: 2rem; } .hero h3 { font-size: 1.2rem; } }
 </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Let's Code & Deploy<span></span></div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <h1>AmanSDLC</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="social-links">
+    <a href="https://github.com/amanpatelitofficial" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/amanpatelofficial/" target="_blank">LinkedIn</a>
+    <a href="https://www.youtube.com/@AmanOps" target="_blank">YouTube</a>
+  </div>
+</header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Hi, I’m <span>Aman Patel</span></h1>
-      <p>DevOps & Cloud Engineer | CI/CD | Kubernetes | AWS | GCP</p>
-      <a href="#contact" class="btn">Get in Touch</a>
-    </div>
-  </section>
+<section class="hero">
+  <h2>Hi, I’m Aman Patel</h2>
+  <h3 class="typing-text"></h3>
+  <p>Building scalable and secure cloud infrastructures with DevSecOps best practices.</p>
+  <div class="hero-links">
+    <a href="https://github.com/amanpatelitofficial" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/amanpatelofficial/" target="_blank">LinkedIn</a>
+    <a href="https://www.youtube.com/@AmanOps" target="_blank">YouTube</a>
+  </div>
+</section>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p style="text-align:center; max-width:800px; margin:auto;">
-      I’m a DevOps Engineer with 5+ years of experience in cloud infrastructure, CI/CD pipelines, Kubernetes orchestration, and automation. 
-      I help businesses scale securely and efficiently on AWS, GCP, and hybrid environments.
-    </p>
-  </section>
+<section id="about">
+  <h3>About Me</h3>
+  <p>I’m a Software Engineer – Cloud & DevSecOps with 4+ years of experience in AWS, Kubernetes, CI/CD automation, and security-focused DevOps. I specialize in building scalable, secure, and automated infrastructures for startups and enterprises.</p>
+</section>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skill-grid">
-      <div class="skill-card">AWS & GCP</div>
-      <div class="skill-card">Docker & Kubernetes</div>
-      <div class="skill-card">CI/CD (Jenkins, GitHub Actions)</div>
-      <div class="skill-card">Terraform & Ansible</div>
-      <div class="skill-card">Linux & Networking</div>
-      <div class="skill-card">Monitoring (Prometheus, Grafana, CloudWatch)</div>
-    </div>
-  </section>
+<section id="skills">
+  <h3>My Skills</h3>
+  <div class="skill-grid">
+    <div class="skill-card"><h4>Cloud Platforms ☁️</h4><p>AWS, GCP, Azure</p></div>
+    <div class="skill-card"><h4>CI/CD ⚙️</h4><p>Jenkins, GitHub Actions, GitLab CI</p></div>
+    <div class="skill-card"><h4>Kubernetes 🐳</h4><p>EKS, GKE, AKS, Helm</p></div>
+    <div class="skill-card"><h4>Automation 🤖</h4><p>Ansible, Terraform, Shell Scripting</p></div>
+    <div class="skill-card"><h4>DevSecOps 🔒</h4><p>Security Scanning, Compliance</p></div>
+    <div class="skill-card"><h4>Monitoring 📊</h4><p>Prometheus, Grafana, CloudWatch</p></div>
+  </div>
+</section>
 
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>EKS Cluster Deployment</h3>
-        <p>Automated deployment of microservices using Helm and Jenkins pipelines.</p>
-      </div>
-      <div class="project-card">
-        <h3>Hybrid Cloud Infrastructure</h3>
-        <p>Built a scalable hybrid environment using Kubeadm, AWS VPC, and VPNs.</p>
-      </div>
-      <div class="project-card">
-        <h3>Monitoring Stack</h3>
-        <p>Implemented full observability with Prometheus, Grafana, and ELK.</p>
-      </div>
-    </div>
-  </section>
+<section id="projects">
+  <h3>Projects</h3>
+  <div class="project-grid">
+    <div class="project-card"><h4>AWS Infra Migration</h4><p>Migrated multi-region workloads to AWS with auto-scaling.</p></div>
+    <div class="project-card"><h4>Kubernetes Cluster Setup</h4><p>Deployed scalable EKS clusters with microservices and CI/CD pipelines.</p></div>
+    <div class="project-card"><h4>DevSecOps Pipeline</h4><p>Built security-first CI/CD workflows with automated vulnerability scanning.</p></div>
+  </div>
+</section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="contact">
-      <a href="mailto:aman@example.com"><i class="fas fa-envelope"></i></a>
-      <a href="https://www.linkedin.com/in/amanpatelofficial/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/amanpatelitofficial" target="_blank"><i class="fab fa-github"></i></a>
-    </div>
-  </section>
+<section id="testimonials">
+  <h3>Testimonials</h3>
+  <div class="testimonial-grid">
+    <div class="testimonial"><p>“Aman’s expertise in DevOps helped us cut deployment time by 50%. Truly a game-changer.”</p><h4>Sarah K.</h4><span>TechFlow</span></div>
+    <div class="testimonial"><p>“Thanks to Aman, our Kubernetes setup is highly reliable and cost-optimized.”</p><h4>James L.</h4><span>InnoWave</span></div>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Aman Patel - DevOps & Cloud Engineer | Let's Code & Deploy</p>
-  </footer>
+<section id="contact">
+  <h3>Get in Touch</h3>
+  <p>Connect with me on:</p>
+  <div class="social-links">
+    <a href="https://github.com/amanpatelitofficial" target="_blank">🐙 GitHub</a>
+    <a href="https://www.linkedin.com/in/amanpatelofficial/" target="_blank">💼 LinkedIn</a>
+    <a href="https://www.youtube.com/@AmanOps" target="_blank">▶️ YouTube</a>
+  </div>
+</section>
+
+<footer>
+  <p>© <script>document.write(new Date().getFullYear())</script> AmanSDLC. All rights reserved.</p>
+</footer>
+
+<script>
+const text = "Software Engineer – Cloud & DevSecOps";
+const typingElement = document.querySelector(".typing-text");
+let index = 0;
+function type() {
+  if(index < text.length){
+    typingElement.textContent += text.charAt(index);
+    index++;
+    setTimeout(type, 100);
+  }
+}
+type();
+
+// Fade-in animations
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, {threshold:0.2});
+document.querySelectorAll('header, .hero, section, .skill-card, .project-card, .testimonial').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
